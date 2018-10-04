@@ -1,6 +1,7 @@
 const express = require('express') // llamamos a Express
 const app = express()
 const router = require('./routes')
+const basedatos =require('./db')
 
 app.use('/api', router)
 
@@ -18,3 +19,4 @@ app.listen(port, () => {
 })
 
 console.log('API todavía no está escuchando!!!!')
+module.exports = app
