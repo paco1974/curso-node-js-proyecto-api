@@ -10,10 +10,6 @@ const app = require('../app/server')
 // reset models and schema from previous tests:
 // see https://github.com/Automattic/mongoose/issues/1251
 
-➜  curso-node-js-proyecto-api git:(master) ✗ chmod -R 777 ./mongodb-data
-➜  curso-node-js-proyecto-api git:(master) ✗ chmod -R 777 ./mongodb-data
-➜  curso-node-js-proyecto-api git:(master) ✗ chmod -R 777 ./mongodb-data
-➜  curso-node-js-proyecto-api git:(master) ✗ chmod -R 777 ./mongodb-data
 const Cervezas = require('../app/models/Cervezas')
 const cervezas = require('../data/cervezas.json')
 
@@ -42,7 +38,7 @@ describe('Recurso cervezas', () => {
   describe('Obtener todas las cervezas', () => {
     it('Debería obtener todas', done => {
       request(app)
-        .get('/api/cervezas')➜  curso-node-js-proyecto-api git:(master) ✗ chmod -R 777 ./mongodb-data
+        .get('/api/cervezas')
         .expect(200)
         .expect(res => {
           expect(res.body.length).to.be.equal(9)

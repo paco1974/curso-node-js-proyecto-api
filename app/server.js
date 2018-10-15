@@ -2,7 +2,11 @@ const express = require('express') // llamamos a Express
 const app = express()
 const router = require('./routes')
 const basedatos =require('./db')
+const bodyParser = require ('body-parser')
 
+/*configuracion de bodyparser */
+app.use(bodyParser.urlencoded({ extended: true}))
+app.use(bodyParser.json())
 app.use('/api', router)
 
 var port = process.env.PORT || 8080 // establecemos nuestro puerto
